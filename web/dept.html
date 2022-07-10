@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>department</title>
+    <script>
+        del = function (dno){
+            if(window.confirm("删除后不可恢复")){
+                alert("deleting.....")
+            }
+            document.location.href = "/WebApp/delete?dno="+dno
+
+        }
+        info = function (dno){
+            document.location.href = "/WebApp/query?dno="+dno
+        }
+
+    </script>
+</head>
+<body>
+    <h1>登入成功</h1>
+    <form action="/WebApp/query  ">
+        <table align="center" border="1">
+            <tr>
+                <td><h1>序号</h1></td>
+                <td><h1>部门编号</h1></td>
+                <td><h1>部门名称</h1></td>
+                <td colspan="3"><h1>操作</h1></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>100</td>
+                <td>销售部</td>
+                <td><input type="button" value="查询" onclick="info(100)"></td>
+                <td><input type="button" value="删除" onclick="del(100)"></td>
+                <td><input type="button" value="修改"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>200</td>
+                <td>研发部</td>
+                <td><input type="button" value="查询" onclick="info(200)"></td>
+                <td><input type="button" value="删除" onclick="del(200)"></td>
+                <td><input type="button" value="修改"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>300</td>
+                <td>运营部</td>
+                <td><input type="button" value="查询" onclick="info(300)"></td>
+                <td><input type="button" value="删除" onclick="del(300)"></td>
+                <td><input type="button" value="修改"></td>
+            </tr>
+
+        </table>
+    </form>
+
+
+
+</body>
+</html>
